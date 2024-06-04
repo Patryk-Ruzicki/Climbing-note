@@ -49,6 +49,30 @@ button:hover, input[type="submit"]:hover {
     background-color: #4cae4c;
 }
 
+.action_btn {
+    padding: 5.5px 7px 5px 7px;
+    background-color: grey;
+    color: white;
+    -webkit-filter: grayscale(0);
+    filter: none;
+    border-radius: 0.4vw;
+}
+
+#edit_btn{
+    background-color: #3c8cf4;
+}
+
+#del_btn{
+    background-color: #e02619;
+}
+
+.action_btn:hover {
+    filter: black;
+    -webkit-filter: grayscale(0.3);
+    filter: grayscale(0.3);
+    text-decoration: none;
+}
+
 table {
     margin-top: 20px;
     border-collapse: collapse;

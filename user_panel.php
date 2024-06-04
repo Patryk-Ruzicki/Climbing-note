@@ -30,7 +30,7 @@ $result = mysqli_query($conn, $query);
             <th>Data przejścia</th>
             <th>Styl przejścia</th>
             <th>Wycena drogi</th>
-            <th>Akcje</th>
+            <th></th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
             <tr>
@@ -38,9 +38,10 @@ $result = mysqli_query($conn, $query);
                 <td><?= htmlspecialchars($row['data_przejscia']) ?></td>
                 <td><?= htmlspecialchars($row['styl_przejscia']) ?></td>
                 <td><?= htmlspecialchars($row['wycena_drogi']) ?></td>
-                <td>
-                    <a href="edit_passage.php?id=<?= $row['id'] ?>">Edytuj</a>
-                    <a href="delete_passage.php?id=<?= $row['id'] ?>">Usuń</a>
+                <td style="width: 124px;">
+                    <a class="action_btn" id="edit_btn" href="edit_passage.php?id=<?= $row['id'] ?>">Edytuj</a>
+                    &nbsp;
+                    <a class="action_btn" id="del_btn" href="delete_passage.php?id=<?= $row['id'] ?>">Usuń</a>
                 </td>
             </tr>
         <?php endwhile; ?>
