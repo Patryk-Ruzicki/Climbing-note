@@ -18,6 +18,7 @@ form {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-top: 20px;
+    width: 250px;
 }
 
 label {
@@ -26,23 +27,25 @@ label {
 }
 
 input {
-    width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 230px;
 }
 
-button {
+button, input[type="submit"] {
     background-color: #5cb85c;
     color: #fff;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
     background-color: #4cae4c;
 }
 
