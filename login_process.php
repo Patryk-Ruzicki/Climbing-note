@@ -2,7 +2,7 @@
 session_start();
 include 'db.php';
 
-$login = $_POST['login'];
+$login = mysqli_real_escape_string($conn, $_POST['login']);
 $password = sha1($_POST['password']);
 
 $query = "SELECT id FROM uzytkownicy WHERE login = '$login' AND haslo = '$password'";

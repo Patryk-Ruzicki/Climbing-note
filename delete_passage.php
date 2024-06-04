@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-$passage_id = $_GET['id'];
+$passage_id = intval($_GET['id']);
 
 $query1 = "DELETE FROM przejscia_uzytkownicy WHERE id_przejscia = $passage_id";
 $query2 = "DELETE FROM przejscia WHERE id = $passage_id";

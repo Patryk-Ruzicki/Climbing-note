@@ -23,21 +23,21 @@ $result = mysqli_query($conn, $query);
 </head>
 
 <body>
-    <h2>Twoje przejścia</h2>
+    <h2>Lista przejść</h2>
     <table>
         <tr>
-            <th>Data przejścia</th>
             <th>Nazwa drogi</th>
-            <th>Wycena drogi</th>
+            <th>Data przejścia</th>
             <th>Styl przejścia</th>
+            <th>Wycena drogi</th>
             <th>Akcje</th>
         </tr>
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
             <tr>
-                <td><?= $row['data_przejscia'] ?></td>
-                <td><?= $row['nazwa_drogi'] ?></td>
-                <td><?= $row['wycena_drogi'] ?></td>
-                <td><?= $row['styl_przejscia'] ?></td>
+                <td><?= htmlspecialchars($row['nazwa_drogi']) ?></td>
+                <td><?= htmlspecialchars($row['data_przejscia']) ?></td>
+                <td><?= htmlspecialchars($row['styl_przejscia']) ?></td>
+                <td><?= htmlspecialchars($row['wycena_drogi']) ?></td>
                 <td>
                     <a href="edit_passage.php?id=<?= $row['id'] ?>">Edytuj</a>
                     <a href="delete_passage.php?id=<?= $row['id'] ?>">Usuń</a>
@@ -57,6 +57,7 @@ $result = mysqli_query($conn, $query);
         <input type="text" id="wycena_drogi" name="wycena_drogi" required><br>
         <button type="submit">Dodaj</button>
     </form>
+    <br>
     <a href="logout.php">Wyloguj</a>
 </body>
 
