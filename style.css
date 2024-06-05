@@ -100,3 +100,18 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+p.error {
+    color: #e02619;
+    height: 10px;
+    margin: 0;
+}
+
+p.alert {
+    color: #4cae4c;
+    padding: 10px;
+    margin: 0;
+    height: 10px;
+    position: fixed;
+    top: 260px;
+}
